@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio personal de desarrollo web full stack. Proyectos, herramientas y contacto.">
+    <meta name="author" content="Tu Nombre">
+    <title>Mi Portfolio | Desarrollo Web Full Stack</title>
+    <link rel="shortcut icon" href="./img/logo.webp" type="image/x-icon">
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#inicio">
+                    <i class="bi bi-code-slash"></i> Mi Portfolio
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#inicio">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#galeria">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#videos">Videos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#calculadora">Calculadora IMC</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <section id="inicio" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-3 fw-bold mb-4 animate-fade-in">
+                        Desarrollo Web <span class="text-accent">Full Stack</span>
+                    </h1>
+                    <p class="lead mb-5">
+                        Bienvenido a mi portfolio personal. Aquí encontrarás mis proyectos, 
+                        herramientas útiles y formas de contacto.
+                    </p>
+                    <div class="d-flex gap-3 justify-content-center">
+                        <a href="#galeria" class="btn btn-primary btn-lg">
+                            <i class="bi bi-images me-2"></i>Ver Proyectos
+                        </a>
+                        <a href="#contacto" class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-envelope me-2"></i>Contactar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="galeria" class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="display-5 fw-bold mb-3">Portfolio de Proyectos</h2>
+                    <p class="lead text-muted">
+                        Colección de proyectos de desarrollo web y capturas de mi experiencia en la institución
+                    </p>
+                </div>
+            </div>
+
+            <!-- Grid de miniaturas -->
+            <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                    <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galeriaModal" data-img="img/proyecto_institucional.png" data-title="Sitio Web Institusional" data-desc="Sitio web Institucional totalmente responsivo desarrollado en grupo para las futuras familias que quieran saber todo lo que ofrece la tecnica 1">
+                        <img src="img/proyecto_institucional.png" alt="Proyecto 1" class="img-fluid rounded">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galeriaModal" data-img="img/elbuengusto.png" data-title="Sistema de Gestión de Rotiseria" data-desc="Aplicacion y Sitio web desarrollado para mostrar y gestionar información de productos de una Rotiseria, ademas de tener la funcion de pedidos, membresisias VIP, etc. Incluye diseño de interfaz, navegación entre secciones y uso de tecnologías como HTML, CSS, JavaScript y PHP, junto con una base de datos MySQL para el manejo de datos.">
+                        <img src="img//elbuengusto.png" alt="Proyecto 2" class="img-fluid rounded">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galeriaModal" data-img="img/Duck.png" data-title="Landing Page Moderna" data-desc="Sistema de gestión de encuestas que permite crear entornos de trabajo, diseñar y responder encuestas de forma simple y personalizada. Centraliza la información y facilita el análisis de datos para mejorar la toma de decisiones.">
+                        <img src="img/Duck.png" alt="Proyecto 3" class="img-fluid rounded">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galeriaModal" data-img="img/laboratorio.webp" data-title="Aula de Programación" data-desc="Laboratorio N°1 de computacion, donde mayormente trabajamos en nuestros proyectos y realizamos exposiciones orales">
+                        <img src="img/laboratorio.webp" alt="Institución 1" class="img-fluid rounded">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galeriaModal" data-img="img/taller.webp" data-title="Taller N°1" data-desc="Taller de ciclo basico, donde pase mis primeros años en la escuela.">
+                        <img src="img/taller.webp" alt="Institución 2" class="img-fluid rounded">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galeriaModal" data-img="img/kiosco.webp" data-title="Kiosco" data-desc="Mi kiosco favorito de todo el colegio.">
+                        <img src="img/kiosco.webp" alt="Institución 3" class="img-fluid rounded">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Galería -->
+    <div class="modal fade" id="galeriaModal" tabindex="-1" aria-labelledby="galeriaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title" id="galeriaModalLabel">Título del Proyecto</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modalImage" src="" alt="Imagen del proyecto" class="img-fluid rounded mb-3">
+                    <p id="modalDescription" class="lead"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section id="videos" class="py-5 bg-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="display-5 fw-bold mb-3">Videos y Tutoriales</h2>
+                    <p class="lead text-muted">
+                        Contenido multimedia relacionado con desarrollo web y tecnología
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="video-container">
+                        <div class="ratio ratio-16x9">
+                            <video controls class="w-100 rounded">
+                                <source src="videos/video1.mp4" type="video/mp4">
+                                
+                            </video>
+                        </div>
+                        <h4 class="mt-3">Introducción al Desarrollo Web</h4>
+                        <p class="text-muted">Conceptos básicos de HTML, CSS y JavaScript</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="video-container">
+                        <div class="ratio ratio-16x9">
+                            <video controls class="w-100 rounded">
+                                <source src="videos/video2.mp4" type="video/mp4">
+                                
+                            </video>
+                        </div>
+                        <h4 class="mt-3">Introducción al Backend</h4>
+                        <p class="text-muted">Explicaciones de teroria y lenguajes de programación mas utilizados en la industria de la programación</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SECCIÓN: CALCULADORA IMC
+         ============================================ -->
+    <section id="calculadora" class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="display-5 fw-bold mb-3">Calculadora de IMC</h2>
+                    <p class="lead text-muted">
+                        Calcula tu Índice de Masa Corporal y conoce tu estado nutricional
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <div class="calculator-card card bg-dark text-white border-secondary">
+                        <div class="card-body p-4">
+                            <form id="calculadoraForm">
+                                <div class="mb-4">
+                                    <label for="peso" class="form-label">Peso (kg)</label>
+                                    <input type="number" class="form-control form-control-lg" id="peso" placeholder="Ej: 70" step="0.1" min="1" max="500" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="altura" class="form-label">Altura (cm)</label>
+                                    <input type="number" class="form-control form-control-lg" id="altura" placeholder="Ej: 170" step="0.1" min="50" max="300" required>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="bi bi-calculator me-2"></i>Calcular IMC
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary" id="limpiarCalc">
+                                        <i class="bi bi-arrow-clockwise me-2"></i>Limpiar
+                                    </button>
+                                </div>
+                            </form>
+
+                            <!-- Resultado -->
+                            <div id="resultadoIMC" class="mt-4 p-4 rounded d-none">
+                                <h4 class="mb-3">Resultado:</h4>
+                                <div class="resultado-valor mb-3">
+                                    <span class="display-4 fw-bold" id="valorIMC">0</span>
+                                </div>
+                                <div class="alert mb-0" id="categoriaIMC" role="alert"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tabla de referencia IMC -->
+                    <div class="card bg-dark text-white border-secondary mt-4">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Tabla de Referencia IMC</h5>
+                            <table class="table table-dark table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>IMC</th>
+                                        <th>Categoría</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>&lt; 18.5</td>
+                                        <td><span class="badge bg-info">Bajo peso</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>18.5 - 24.9</td>
+                                        <td><span class="badge bg-success">Normal</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>25.0 - 29.9</td>
+                                        <td><span class="badge bg-warning">Sobrepeso</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>≥ 30.0</td>
+                                        <td><span class="badge bg-danger">Obesidad</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SECCIÓN: FORMULARIO DE CONTACTO
+         ============================================ -->
+    <section id="contacto" class="py-5 bg-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="display-5 fw-bold mb-3">Contacto</h2>
+                    <p class="lead text-muted">
+                        ¿Tienes un proyecto en mente? ¡Hablemos!
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card bg-dark text-white border-secondary">
+                        <div class="card-body p-4">
+                            <form id="contactoForm">
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">Nombre Completo</label>
+                                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="tu@email.com" required>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="asunto" class="form-label">Asunto</label>
+                                    <input type="text" class="form-control" id="asunto" name="asunto" placeholder="¿De qué quieres hablar?" required>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="mensaje" class="form-label">Mensaje</label>
+                                    <textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary btn-lg" id="btnEnviar">
+                                        <i class="bi bi-send me-2"></i>Enviar Mensaje
+                                    </button>
+                                </div>
+                            </form>
+
+                            <!-- Mensaje de respuesta -->
+                            <div id="mensajeRespuesta" class="mt-4 d-none"></div>
+                        </div>
+                    </div>
+
+                    <!-- Información de contacto adicional -->
+                    <div class="row mt-4 g-3">
+                        <div class="col-md-4">
+                            <div class="card bg-dark text-white border-secondary text-center p-3">
+                                <i class="bi bi-geo-alt display-4 text-primary mb-2"></i>
+                                <h6>Ubicación</h6>
+                                <p class="text-muted small mb-0">Buenos Aires, Argentina</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card bg-dark text-white border-secondary text-center p-3">
+                                <i class="bi bi-envelope display-4 text-primary mb-2"></i>
+                                <h6>Email</h6>
+                                <p class="text-muted small mb-0">luchocampanelli1@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card bg-dark text-white border-secondary text-center p-3">
+                                <i class="bi bi-github display-4 text-primary mb-2"></i>
+                                <h6>GitHub</h6>
+                                <p class="text-muted small mb-0">github.com/Campa002</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-3 mb-lg-0">
+                    <h5 class="mb-3">Portfolio Web Full Stack</h5>
+                    <p class="text-muted">
+                        Proyecto desarrollado con HTML5, CSS3, JavaScript, PHP y MySQL.
+                        Bootstrap 5 | Responsive Design
+                    </p>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <h5 class="mb-3">Redes Sociales</h5>
+                    <div class="social-links">
+                        <a href="https://github.com/Campa002" class="btn btn-outline-light btn-sm me-2">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/luciano-campanelli-9b5975316/" class="btn btn-outline-light btn-sm me-2">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="https://www.x.com" class="btn btn-outline-light btn-sm me-2">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/luchocampanelli1/" class="btn btn-outline-light btn-sm">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <div class="text-center text-muted">
+                <p class="mb-0">
+                    &copy; 2026 Portfolio Web Full Stack. Todos los derechos reservados.
+                    <br>
+                    <small>Proyecto Educativo - Institución Educativa</small>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Scripts personalizados -->
+    <script src="js/galeria.js"></script>
+    <script src="js/calculadora.js"></script>
+    <script src="js/formulario.js"></script>
+</body>
+</html>

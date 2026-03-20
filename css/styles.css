@@ -1,0 +1,454 @@
+/**
+ * Estilos Personalizados - Portfolio Web Full Stack
+ * Tema: Oscuro con acentos azules
+ * Framework base: Bootstrap 5.3
+ */
+
+/* ============================================
+   VARIABLES PERSONALIZADAS
+   ============================================ */
+:root {
+    --color-primary: #007bff;
+    --color-secondary: #6c757d;
+    --color-accent: #00d4ff;
+    --color-dark: #0a0e27;
+    --color-dark-alt: #1a1f3a;
+    --color-card: #151930;
+    --color-border: #2d3250;
+    --color-text: #e8e9ed;
+    --color-text-muted: #a8adb7;
+}
+
+/* ============================================
+   ESTILOS GENERALES
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-dark);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent);
+}
+
+/* ============================================
+   NAVEGACIÓN
+   ============================================ */
+.navbar {
+    background-color: var(--color-dark) !important;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: var(--color-accent) !important;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+}
+
+.nav-link {
+    color: var(--color-text) !important;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem !important;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--color-accent);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 80%;
+}
+
+.nav-link:hover {
+    color: var(--color-accent) !important;
+}
+
+/* ============================================
+   SECCIÓN HERO
+   ============================================ */
+.hero-section {
+    background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-dark-alt) 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(0, 123, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.text-accent {
+    color: var(--color-accent) !important;
+}
+
+.animate-fade-in {
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   SECCIONES
+   ============================================ */
+section {
+    padding: 80px 0;
+}
+
+.bg-section {
+    background-color: var(--color-dark-alt);
+}
+
+/* ============================================
+   GALERÍA
+   ============================================ */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 123, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-overlay i {
+    font-size: 3rem;
+    color: white;
+}
+
+/* ============================================
+   VIDEOS
+   ============================================ */
+.video-container {
+    position: relative;
+    background: var(--color-card);
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid var(--color-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+}
+
+.video-container iframe {
+    border-radius: 8px;
+}
+
+/* ============================================
+   CALCULADORA
+   ============================================ */
+.calculator-card {
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.calculator-card:hover {
+    transform: translateY(-5px);
+}
+
+.calculator-card .form-control {
+    background-color: var(--color-dark-alt);
+    border: 2px solid var(--color-border);
+    color: var(--color-text);
+    font-size: 1.1rem;
+}
+
+.calculator-card .form-control:focus {
+    background-color: var(--color-dark-alt);
+    border-color: var(--color-primary);
+    color: var(--color-text);
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
+
+#resultadoIMC {
+    background: linear-gradient(135deg, var(--color-dark-alt) 0%, var(--color-card) 100%);
+    border: 2px solid var(--color-border);
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.resultado-valor {
+    text-align: center;
+    color: var(--color-accent);
+}
+
+/* ============================================
+   FORMULARIO DE CONTACTO
+   ============================================ */
+#contactoForm .form-control {
+    background-color: var(--color-dark-alt);
+    border: 2px solid var(--color-border);
+    color: var(--color-text);
+    transition: all 0.3s ease;
+}
+
+#contactoForm .form-control:focus {
+    background-color: var(--color-dark-alt);
+    border-color: var(--color-primary);
+    color: var(--color-text);
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
+
+#contactoForm .form-control::placeholder {
+    color: var(--color-text-muted);
+}
+
+#contactoForm .form-control.is-invalid {
+    border-color: #dc3545;
+}
+
+#contactoForm .form-control.is-valid {
+    border-color: #28a745;
+}
+
+#contactoForm .invalid-feedback {
+    display: none;
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+#contactoForm .form-control.is-invalid ~ .invalid-feedback {
+    display: block;
+}
+
+/* ============================================
+   CARDS
+   ============================================ */
+.card {
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+}
+
+/* ============================================
+   BOTONES
+   ============================================ */
+.btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 212, 255, 0.4);
+}
+
+.btn-outline-light:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-dark) !important;
+}
+
+/* ============================================
+   MODAL
+   ============================================ */
+.modal-content {
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+    background-color: var(--color-dark) !important;
+    border-top: 2px solid var(--color-border);
+}
+
+.footer a {
+    transition: all 0.3s ease;
+}
+
+.footer a:hover {
+    transform: translateY(-3px);
+}
+
+/* ============================================
+   TABLA
+   ============================================ */
+.table-dark {
+    background-color: var(--color-dark-alt);
+}
+
+.table-dark tbody tr {
+    border-color: var(--color-border);
+}
+
+/* ============================================
+   BADGES
+   ============================================ */
+.badge {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .gallery-item img {
+        height: 200px;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+}
+
+/* ============================================
+   UTILIDADES
+   ============================================ */
+.text-muted {
+    color: var(--color-text-muted) !important;
+}
+
+/* Loading animation para el botón de enviar */
+.btn-loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.btn-loading::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spinner 0.6s linear infinite;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
