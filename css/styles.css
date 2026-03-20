@@ -102,7 +102,7 @@ html {
 }
 
 /* ============================================
-   SECCIÓN HERO
+   SECCIÓN HERO.ss
    ============================================ */
 .hero-section {
     background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-dark-alt) 100%);
